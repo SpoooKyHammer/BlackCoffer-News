@@ -11,7 +11,7 @@ public class News {
     @Id
     public ObjectId Id;
 
-    public String end_year;
+    public Integer end_year;
     public String cityLng;
     public String cityLat;
     public String section;
@@ -36,7 +36,7 @@ public class News {
     public News() {
     }
 
-    public News(ObjectId id, String end_year, String cityLng, String cityLat, String section, Integer intensity,
+    public News(ObjectId id, Integer end_year, String cityLng, String cityLat, String section, Integer intensity,
             String topic, String insight, String swot, String url, String region, Integer start_year, Integer impact,
             String added, String published, String city, String country, Integer relevance, String pestle,
             String source, String title, Integer likelihood) {
