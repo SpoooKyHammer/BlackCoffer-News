@@ -4,8 +4,8 @@ services:
   mongodb:
     image: mongo:latest
     container_name: mongodb
-    ports:
-      - "27017:27017"
+    expose: 
+      - 27017
     volumes:
       - ./mongodb-data:/data/db
       - ./init:/docker-entrypoint-initdb.d
@@ -13,3 +13,11 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
       MONGO_INITDB_DATABASE: blackcoffer
+
+  api_service:
+    image: blackcoffer-news-api
+    ports:
+      - "80:8080"
+    command: java -jar blackcoffer-1.0.0.jar
+    depends_on:
+      - mongodb
