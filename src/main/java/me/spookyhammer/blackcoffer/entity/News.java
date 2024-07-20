@@ -14,7 +14,7 @@ public class News {
     public Integer end_year;
     public String cityLng;
     public String cityLat;
-    public String section;
+    public String sector;
     public Integer intensity;
     public String topic;
     public String insight;
@@ -36,7 +36,7 @@ public class News {
     public News() {
     }
 
-    public News(ObjectId id, Integer end_year, String cityLng, String cityLat, String section, Integer intensity,
+    public News(ObjectId id, Integer end_year, String cityLng, String cityLat, String sector, Integer intensity,
             String topic, String insight, String swot, String url, String region, Integer start_year, Integer impact,
             String added, String published, String city, String country, Integer relevance, String pestle,
             String source, String title, Integer likelihood) {
@@ -44,7 +44,7 @@ public class News {
         this.end_year = end_year;
         this.cityLng = cityLng;
         this.cityLat = cityLat;
-        this.section = section;
+        this.sector = sector;
         this.intensity = intensity;
         this.topic = topic;
         this.insight = insight;
